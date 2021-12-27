@@ -3,9 +3,9 @@
 
 Los temas que veremos en este curso son:
 
-##Universidad HTML:
--Introducción a HTML
--Instalación de Herramientas (Visual Studio Code)
+## Universidad HTML:
+- Introducción a HTML
+- Instalación de Herramientas (Visual Studio Code)
 -Elementos Básicos de HTML
 -Introducción a CSS
 -Links en HTML y CSS
@@ -15,7 +15,7 @@ Los temas que veremos en este curso son:
 -Formularios en HTML
 -Elementos Semánticos en HTML
 
-##Universidad CSS:
+## Universidad CSS:
 -Introducción a CSS
 -Selectores en CSS
 -Manejo de Colores en CSS
@@ -33,7 +33,7 @@ Los temas que veremos en este curso son:
 -Box Shadow en CSS
 -Flexbox en CSS
 
-##Universidad JavaScript:
+## Universidad JavaScript:
 -Introducción a JavaScript
 -Tipos de Datos en JavaScript
 -Operadores en JavaScript
