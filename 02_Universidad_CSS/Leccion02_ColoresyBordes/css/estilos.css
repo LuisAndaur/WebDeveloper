@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+}
+
+.rojo{
+    background-color: salmon;
+    border: 5px solid firebrick;
+}
+
+.rosa{
+    background-color: pink;
+    border: 5px dashed rgb(255, 105, 180);
+}
+
+.amarillo{
+    background-color: lightyellow;
+    border: 5px double #ffd700;
+}
+
+.azul{
+    background-color: lightcyan;
+    border: 5px dotted hsl(174, 72%, 56%);
+}
+
+/*
+.rojo, .rosa{
+    color: white;
+}*/
+
+.punteado{
+    border-style: dotted;
+    border-width: 10px 5px 3px 2px;
+}
+
+.discontinuo{
+    border-style: dashed;
+    border-width: thick;/*this, medium, thick*/
+    border-color: rosybrown gold lightgreen crimson;
+}
+
+.surco{
+    border: 10px groove;
+}
+
+.cresta{
+    border: 10px ridge;
+}
+
+.recuadro{
+    border: 10px inset;
+}
+
+.outset{
+    border: 10px outset;
+}
+
+.mixto{
+    border-style: dotted solid dashed double;
+}
