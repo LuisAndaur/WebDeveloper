@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+
+div.contenedor{
+    position: relative;
+    border: 3px dashed greenyellow;
+    width: 30%;
+    margin: auto;
+}
+
+img.imagen{
+    width: 100%;
+    opacity: .2;
+}
+
+div.centro{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+div.relativo{
+    position: relative;
+    max-width: 300px;
+    height: 200px;
+    border: 3px solid cornflowerblue;
+    top: 10px;
+    left: 100px;
+}
+
+div.absoluto{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 3px solid firebrick;
+
+}
+
+div.sticky{
+    position: sticky;
+    top: 0;
+    border: 1px solid #2d7db6;
+}*/
