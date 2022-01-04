@@ -1,0 +1,43 @@
+html{
+    height: auto;
+    min-height: 100%;
+}
+
+body{
+    /* background: linear-gradient(#f72585, #3a0ca3); de arriba hacias abajo*/
+    /* background: linear-gradient(to right,#f72585, #3a0ca3); de izq hacia la der*/
+    /* background: linear-gradient(#24404d, #6dbff1, black); 3 colores*/
+    /* background: linear-gradient(to bottom right,#f72585, #3a0ca3); en diagonal*/
+    /* background: linear-gradient(145deg,#f72585, #3a0ca3); eligiendo un angulo específico*/
+    background: radial-gradient(circle,#bdc09d, #fffca6);
+}
+
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 5px #a8dadc;
+    color: #e63946;
+}
+
+div.contenedor{
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    background-color: beige;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px grey;
+    color: #457b9d;
+    border-radius:15px ;
+}
+
+div.cabecera{
+    background-color: #b4e6f5;
+}
+
+div.cuerpo{
+    padding: 2px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px grey;
+}
