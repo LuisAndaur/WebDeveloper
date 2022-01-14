@@ -2,44 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo DOM con JS</title>
-    <style>
-        .azul{
-            color: blue;
-        }
-    </style>
+    <title>Manejo DOM con JS</title>
 </head>
 <body>
-    <h1 id="cabecero" class="azul">Ejemplo DOM con JS</h1>
-    <p id="parrafo1" class="azul">Saludos!</p>
-    <p id="parrafo2" class="azul">Otro parrafo</p>
+    <h1 id="titulo">Manejo DOM con JS</h1>
+
+    <button onclick="mostrar()">Mostrar</button><br>
+    <img id="imagen" src="./img/javascript.png" alt="">
+
     <script>
-        let cabecero = document.getElementById("cabecero").innerHTML;
-        console.log("Valor cabecero: "+ cabecero);
-
-        let parrafo = document.getElementById("parrafo1");
-        console.log(`Valor parrafo: ${parrafo1.innerHTML}`);
-        parrafo.innerHTML = "Nuevo valor del parrafo";
-
-        console.log("Tag Name");
-        let parrafos = document.getElementsByTagName("p");
-        console.log(`N° parrafos: ${parrafos.length}`);
-        for(let i=0; i<parrafos.length;i++){
-            console.log(`i: ${i} - ${parrafos[i].innerHTML}`);
-        }
-
-        console.log("Class Name");
-        let elementos = document.getElementsByClassName("azul");
-        console.log(`N° elementos: ${elementos.length}`);
-        for(let elemento of elementos){
-            console.log(`${elemento.innerHTML}`);
-        }
-
-        console.log("Query selector all");
-        let elementos2 = document.querySelectorAll("h1.azul");
-        console.log(`N° elementos: ${elementos2.length}`);
-        for(let elemento of elementos2){
-            console.log(`${elemento.innerHTML}`);
+        function mostrar(){
+            document.getElementById("imagen").src = "./img/html5.png";
+            document.getElementById("titulo").style.color = "crimson";
         }
     </script>
 </body>

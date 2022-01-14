@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo DOM con JS</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="cabecero" class="azul">Ejemplo DOM con JS</h1>
+    <p id="parrafo1" class="azul">Saludos!</p>
+    <p id="parrafo2" class="azul">Otro parrafo</p>
+
+    <form id="formulario">
+        Nombre: <input type="text" name="nombre" value="Juan"><br>
+        Apellido: <input type="text" name="apellido" value="Perex"><br>
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button><br>
+
+    <script>
+        let cabecero = document.getElementById("cabecero").innerHTML;
+        console.log("Valor cabecero: "+ cabecero);
+
+        let parrafo = document.getElementById("parrafo1");
+        console.log(`Valor parrafo: ${parrafo1.innerHTML}`);
+        parrafo.innerHTML = "Nuevo valor del parrafo";
+        console.log("");
+        console.log("Tag Name");
+        let parrafos = document.getElementsByTagName("p");
+        console.log(`N° parrafos: ${parrafos.length}`);
+        for(let i=0; i<parrafos.length;i++){
+            console.log(`i: ${i} - ${parrafos[i].innerHTML}`);
+        }
+        console.log("");
+        console.log("Class Name");
+        let elementos = document.getElementsByClassName("azul");
+        console.log(`N° elementos: ${elementos.length}`);
+        for(let elemento of elementos){
+            console.log(`${elemento.innerHTML}`);
+        }
+        console.log("");
+        console.log("Query selector all");
+        let elementos2 = document.querySelectorAll("h1.azul");
+        console.log(`N° elementos: ${elementos2.length}`);
+        for(let elemento of elementos2){
+            console.log(`${elemento.innerHTML}`);
+        }
+        console.log("");
+        console.log("Formularios");
+        function mostrarValores2(){
+            let formulario = document.forms["formulario"];
+            let texto = "";
+            for(let elemento of formulario){
+                texto += elemento.value;
+            }
+            console.log(texto);
+        }
+        console.log("");
+        console.log("Formularios por separado");
+        function mostrarValores(){
+            let formulario = document.forms["formulario"];
+            let texto = "";
+            let nombre = formulario["nombre"];
+            let apellido = formulario["apellido"];
+            texto = nombre.value + " " + apellido.value;
+            console.log(texto);
+        }
+
+        console.log("");
+        console.log("document.write");
+        document.write("Saludos desde document-write");
+        
+
+    </script>
+</body>
+</html>
