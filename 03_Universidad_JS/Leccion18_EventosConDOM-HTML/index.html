@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo DOM con JS</title>
+</head>
+<body>
+
+    <!-- DELEGACION DE EVENTOS -->
+
+    <h1 id="titulo">Manejo DOM con JS</h1><br>
+    <form id="formulario">
+        Nombre: <input type="text" id="nombre">
+        Apellido: <input type="text" id="apellido">
+    </form>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        
+        formulario.addEventListener("focus",(evento) => { evento.target.style.background = "pink"; }, true );
+        formulario.addEventListener("blur",(evento) => { evento.target.style.background = "white"; }, true );
+        
+    </script>
+
+
+<!-- MÉTODO ADD EVENT LISTENER CON FUNCIONES FLECHA
+
+<script>
+    document.getElementById("nombre").addEventListener("focus",(evento) => { evento.target.style.background = "pink"; } );
+    document.getElementById("nombre").addEventListener("blur",(evento) => { evento.target.style.background = "white"; });
+    document.getElementById("apellido").addEventListener("focus",(evento) => { evento.target.style.background = "pink"; });
+    document.getElementById("apellido").addEventListener("blur",(evento) => { evento.target.style.background = "white"; });
+</script> -->
+
+
+
+<!-- MÉTODO ADD EVENT LISTENER CON FUNCIONES NORMALES
+
+    <script>
+    document.getElementById("nombre").addEventListener("focus",cambiar);
+    document.getElementById("nombre").addEventListener("blur",regresar);
+    document.getElementById("apellido").addEventListener("focus",cambiar);
+    document.getElementById("apellido").addEventListener("blur",regresar);
+    function cambiar(evento){
+        let componente = evento.target;
+        componente.style.background = "yellow";
+    }
+
+    function regresar(evento){
+        evento.target.style.background = "white";
+    }
+
+</script> -->
+
+
+<!-- MÉTODO ONFOCUS Y ONBLUR
+    
+<h1 id="titulo">Manejo DOM con JS</h1><br>
+Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)">
+<script>
+    function cambiar(elementoInput){
+        elementoInput.style.background = "yellow";
+    }
+
+    function regresar(elementoInput){
+        elementoInput.style.background = "white";
+    }
+
+</script> -->
+
+<!-- MÉTODO ONMOUSEOVER, ONMOUSEOUT, ONMOUSEDOWN, ONMOUSEUP, ONCLICK
+    
+<h1 id="titulo" onmouseover="rojo(this)" onmouseout="azul(this)">Manejo DOM con JS</h1><br>
+<h1 id="titulo" onmousedown="rojo(this)" onmouseup="azul(this)" onclick="verde(this)">Manejo DOM con JS</h1><br>
+
+<script>
+    function rojo(titulo){
+        titulo.style.color = "red";
+    }
+
+    function azul(titulo){
+        titulo.style.color = "blue";
+    }
+
+    function verde(titulo){
+        titulo.style.color = "green";
+    }
+</script> -->
+    
+    <!-- <script>
+        function convertir(nombreInput){
+            nombreInput.value = nombreInput.value.toUpperCase();
+        }
+    </script> -->
+
+<!-- MÉTODO ONLOAD
+    
+    <body onload="entrar()">
+
+    <h1 id="titulo">Manejo DOM con JS</h1><br>
+    <div id="mostrar"></div>
+
+    <script>
+        function entrar(){
+            alert("Entrando a la pagina web");  
+            let texto = "";
+            if(navigator.cookieEnabled){
+                texto = "Cookies habilitadas";
+            }
+            else{
+                texto = "Cookies inhabilitadas";
+            }
+            document.getElementById("mostrar").innerHTML = texto;            
+        }
+    </script>
+</body> -->
+
+    <!-- MÉTODO ONCLICK
+        
+        <script>
+        document.getElementById("titulo").onclick = cambiarTexto;
+
+        function cambiarTexto(titulo){
+            document.getElementById("mostrar").innerHTML = "Nuevo contenido";
+        }
+    </script> -->
+
+    <!-- <h1 onclick="cambiarTexto(this)">Manejo DOM con JS</h1>
+    <script>
+        function cambiarTexto(titulo){
+            titulo.innerHTML = "Nuevo título";
+        }
+    </script> -->
+</body>
+</html>
